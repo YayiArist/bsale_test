@@ -1,6 +1,6 @@
 require("dotenv").config();
 const { Sequelize } = require('sequelize');
-const ProductModel = require('./models/product.js')
+const ProductModel = require('./models/Product')
 const ProductCategory = require('./models/category.js')
 const { DB_NAME, DB_USER, DB_PASSWORD, DB_HOST } = process.env;
 
