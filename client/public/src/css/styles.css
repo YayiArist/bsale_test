@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(237, 235, 235);
+  font-family: "Roboto", "sans-serif";
+}
+
+.topbar {
+  display: flex;
+  height: 6em;
+  width: 100vw;
+  border-bottom: 1px solid #ccc;
+  background-color: #0099cc;
+  position: fixed;
+  z-index: 1000;
+  border: none;
+}
+.topbarLeft,
+.topbarCenter,
+.topbarRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.topbarRight a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #080706;
+  font-weight: 500;
+}
+
+.cartIcon {
+  height: 50px;
+  width: 50px;
+}
+.cartIcon:hover {
+  height: 51px;
+  width: 51px;
+  cursor: pointer;
+}
+
+/* ---barra de busqueda--- */
+.field {
+  width: 100%;
+}
+.search {
+  height: 30px;
+  width: 60%;
+  border-radius: 15px 0 0 15px;
+  background-color: #ffffff;
+  padding-left: 20px;
+  border-right: none;
+  border: #080706;
+}
+.search:focus {
+  outline: none;
+}
+.searchButton {
+  height: 30px;
+  border-radius: 0 15px 15px 0;
+  border: #080706;
+  border-left: none;
+  margin-left: -4px;
+  width: 100px;
+  background-color: #fff;
+}
+.searchButton:hover {
+  cursor: pointer;
+  background-color: rgb(237, 235, 235);
+}
+
+/* ------------------------------- */
+.title {
+  display: inline;
+  font-size: 3em;
+  font-family: "nerko one", "cursive", "sans-serif";
+}
+.container {
+  display: flex;
+  width: 100vw;
+}
+.filters {
+  width: 12%;
+  padding-left: 40px;
+  margin-right: 40px;
+  padding-top: 6em;
+  position: sticky;
+  top: 60px;
+  height: 100vh;
+}
+.categoryFilters {
+  display: flex;
+  flex-direction: column;
+}
+
+.setCategory {
+  background-color: #fa8546;
+  color: white;
+  border: none;
+  transition-duration: 0.4s;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 50px;
+  min-width: 150px;
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.products {
+  padding-top: 60px;
+  width: 80%;
+  margin-left: 30px;
+}
+.sortSelect {
+  margin-left: 60px;
+  margin-top: 60px;
+  width: 150px;
+  height: 30px;
+  font-size: 1em;
+}
+.sortSelect:focus {
+  outline: none;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.productContainer {
+  margin: 1.2em;
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+  border: 1px solid rgb(218, 216, 216);
+  height: 450px;
+  overflow: hidden;
+}
+.productName {
+  margin-top: 20px;
+}
+
+.productContainer img {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 100%;
+  object-fit: fill;
+  border-radius: 10px;
+}
+
+.imgContainer {
+  width: 300px;
+  height: 75%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.addButton {
+  background-color: white;
+  color: black;
+  border: 2px solid #fa8546;
+  transition-duration: 0.4s;
+  padding: 5px;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  background-color: #fa8546;
+  color: white;
+}
+
+.back {
+  background-color: #e8126b;
+  color: #fff;
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+}
+
+.btnBack {
+  width: 120px;
+  height: 40px;
+  margin-left: 400px;
+}
+
+.hide {
+  display: none;
+}
+
+/*-------carrito---------*/
+
+.containerCart {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.containerItems {
+  width: 80%;
+  height: 500px;
+  background-color: #fff;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartTitle {
+  font-size: 2em;
+  font-weight: 500;
+  display: flex;
+  align-self: center;
+}
+.formGroup {
+  border: none;
+}
+.formGroup input {
+  width: 70%;
+  height: 30px;
+  padding-left: 15px;
+}
+.formGroup label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* *************** */
+
+@media (max-width: 768px) {
+  .topbarLeft {
+    display: none;
+  }
+
+  .topbarCenter {
+    margin-left: 20px;
+    flex: 2;
+  }
+
+  .cartIcon {
+    height: 30px;
+    width: 30px;
+  }
+  .search {
+    width: 40%;
+  }
+}

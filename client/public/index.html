@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="../src/js/index.js"></script>
+  <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/styles.css">
+  <title>BSALE TEST</title>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbarLeft">
+      <h1 class="title">BSALE TEST</h1>
+    </div>
+    <div class="topbarCenter">
+      <div class="field" id="searchForm">
+        <input type="text" id="search" class="search" placeholder="Buscar un producto..." />
+        <input type="submit" id="searchButton" class="searchButton" value="Buscar" onclick=search() />
+
+      </div>
+    </div>
+    </div>
+    <div class="topbarRight">
+      <a href="#" class="cart">
+        <img src="./src/img/cart.jpeg" class="cartIcon" href="#" id=""></img>
+        Ver Carrito
+      </a>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="container">
+
+      <section class="filters">
+        <div class="categoryFilters" id="categoryFilters"></div>
+
+      </section>
+
+
+
+      <section class="products">
+
+        <select class="sortSelect" onchange=priceSort() name="" id="sort">
+          <option value="">Ordenar por</option>
+          <option value="toHigh">Menor precio</option>
+          <option value="toLow">Mayor precio</option>
+        </select>
+
+
+
+        <div class="btnBack">
+          <button id="back" class="back hide" onclick=search()> « Volver</button>
+        </div>
+        <div class="content" id="content"></div>
+
+      </section>
+
+  </main>
+
+</body>
+
+</html>
