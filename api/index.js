@@ -1,4 +1,5 @@
 require('dotenv').config();
+const axios = require('axios')
 const path = require('path');
 const cors = require ('cors');
 const express =require('express');
@@ -7,6 +8,7 @@ const routes = require('./src/routes/index');
 const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
 const port = process.env.PORT || 3001
+axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3001";
 
 const app= express()
 
